@@ -13,7 +13,10 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
-
+bot.onText(/^/, function (msg) {
+  var name = msg.from.first_name;
+  bot.sendMessage(msg.chat.id, 'هلا, ' + name + '!').then(function () {
+    
 class StatsController extends TelegramBaseController {
   hashrateHandler($) {
       request('https://blockchain.info/stats?format=json', (error, response, body) =>
@@ -402,4 +405,8 @@ tg.router
   .when('/chartalltime', new ChartsController())
   .when('/charthashrate', new ChartsController())
 .otherwise(new OtherwiseController())
+    // reply sent!
+  });
+});
+
 module.exports = bot;
