@@ -2,7 +2,7 @@
 
 const Telegram = require('telegram-node-bot')
 const TelegramBaseController = Telegram.TelegramBaseController
-const tg = new Telegram.Telegram('682434236:AA-qVUYP7rr_nWeb-QFwKzoZKS_Zsv0bE8')
+const tg = new Telegram.Telegram('604100947:AAGVaclIuMKkzJuhDtx3ocxk9H0JKrDn-4Y')
 var request = require('request');
 
 class StatsController extends TelegramBaseController {
